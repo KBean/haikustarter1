@@ -72,6 +72,7 @@
   },
   "projectType": "REGULAR",
   "projectAppType": "REGULAR",
+  "hasSetupSection": false,
   "bundleExporterSettings": {
     "exportOptions": {
       "exportUploads": false,
@@ -88,6 +89,7 @@
       "exportGitRepository": false,
       "exportInsightsData": false,
       "useManualPluginsInfo": false,
+      "exportNotebooksWithOutputs": true,
       "includedDatasetsData": [],
       "includedSavedModels": [],
       "includedModelEvaluationStores": [],
@@ -107,7 +109,24 @@
   },
   "owner": "admin",
   "permissionsVersion": "LEGACY",
-  "permissions": [],
+  "permissions": [
+    {
+      "group": "space_administrators",
+      "admin": true,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "shareToWorkspaces": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    }
+  ],
   "additionalDashboardUsers": {
     "users": []
   },
@@ -218,6 +237,7 @@
         },
         "scaling": {
           "initialReplicas": 1,
+          "progressDeadlineSeconds": 600,
           "hpa": false,
           "hpaTargetCPUPercent": 0,
           "hpaMetrics": [],
@@ -225,7 +245,9 @@
           "hpaMaxPods": 0,
           "hpaAnnotations": []
         },
-        "deploymentModifier": {}
+        "deploymentModifier": {
+          "config": {}
+        }
       }
     },
     "dkuProperties": []
@@ -287,11 +309,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 143,
+    "versionNumber": 144,
     "lastModifiedBy": {
-      "login": "admin"
+      "login": "api:ZTSS4ITOXFFQ29XD"
     },
-    "lastModifiedOn": 1661147146341
+    "lastModifiedOn": 1684698051959
   },
   "creationTag": {
     "versionNumber": 0,

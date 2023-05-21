@@ -72,6 +72,7 @@
   },
   "projectType": "REGULAR",
   "projectAppType": "REGULAR",
+  "hasSetupSection": false,
   "bundleExporterSettings": {
     "exportOptions": {
       "exportUploads": false,
@@ -88,6 +89,7 @@
       "exportGitRepository": false,
       "exportInsightsData": false,
       "useManualPluginsInfo": false,
+      "exportNotebooksWithOutputs": true,
       "includedDatasetsData": [],
       "includedSavedModels": [],
       "includedModelEvaluationStores": [],
@@ -105,9 +107,26 @@
       "exportForeignObjectsReferences": true
     }
   },
-  "owner": "admin",
+  "owner": "judy.nam@dataiku.com",
   "permissionsVersion": "LEGACY",
-  "permissions": [],
+  "permissions": [
+    {
+      "group": "space_administrators",
+      "admin": true,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "shareToWorkspaces": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    }
+  ],
   "additionalDashboardUsers": {
     "users": []
   },
@@ -218,6 +237,7 @@
         },
         "scaling": {
           "initialReplicas": 1,
+          "progressDeadlineSeconds": 600,
           "hpa": false,
           "hpaTargetCPUPercent": 0,
           "hpaMetrics": [],
@@ -225,12 +245,15 @@
           "hpaMaxPods": 0,
           "hpaAnnotations": []
         },
-        "deploymentModifier": {}
+        "deploymentModifier": {
+          "config": {}
+        }
       }
     },
     "dkuProperties": []
   },
-  "name": "Haiku Starter for Administrator (prune-flow)",
+  "name": "Machine Learning Basics (Tutorial) for judy.nam",
+  "projectStatus": "Sandbox",
   "imgPattern": 8,
   "metrics": {
     "probes": [],
@@ -287,11 +310,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 143,
+    "versionNumber": 144,
     "lastModifiedBy": {
-      "login": "admin"
+      "login": "judy.nam@dataiku.com"
     },
-    "lastModifiedOn": 1661147146341
+    "lastModifiedOn": 1684696343609
   },
   "creationTag": {
     "versionNumber": 0,
@@ -301,12 +324,11 @@
     "lastModifiedOn": 1498738782025
   },
   "description": "",
-  "shortDesc": "This project works with the data used in the [Basics 101-103 courses](https://academy.dataiku.com/page/core-concepts), and is a starting point for a number of learning materials.\n\nThe project *HAIKU_STARTER_FOR_ADMINISTRATOR_PRUNE_FLOW* was copied from *DKU_HAIKU_STARTER_1* by Administrator on Aug 22nd 2022",
+  "shortDesc": "Build your first predictive model with [Machine Learning Basics course](https://academy.dataiku.com/machine-learning-basics).",
   "tags": [
     "tutorial",
     "downloads",
-    "section:General Topics",
-    "duplicated"
+    "section:General Topics"
   ],
   "customFields": {},
   "checklists": {
